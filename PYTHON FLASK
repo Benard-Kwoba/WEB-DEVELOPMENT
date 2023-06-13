@@ -1,13 +1,24 @@
 # CREATE A FLASK APP
-
-from flask import  Flask
-
-app = Flask(__name__)  # __name__ as an arg to Flask, you are providing the name of the current module to the Flask
-
-@app.route("/")
-def index():
-    return rf"""
-My FIRST FLASK APP IS GOOD
 """
+create a html named "index.html" in "templates" folder in your current python directory. The html should have the following contents:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5"> <!-- Refresh the page every 5 seconds -->
+</head>
+<body>
+    <h1>MY FIRST FLASK APP IS GOOD</h1>
+</body>
+</html>
+"""
+from flask import  Flask, render_template
+
+app = Flask(__name__)  # Flask constructor takes the name of current module (__name__) as argument
+
+@app.route("/")  # route()- a decorator, tells the application which URL should call the associated function.
+def data_science():
+    return render_template("index.html")  # javascript enabled, for automatic refresh
 if __name__ == "__main__":  # ensures that the following code block is only executed if the module is being run directly
     app.run(debug=True)
+
+
