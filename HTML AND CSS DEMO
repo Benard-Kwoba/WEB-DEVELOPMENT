@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-KE">
     <head>
         <title>HTML 5 AND CSS3 COURSE</title>
+        <meta http-equiv="refresh" content="3"> <!-- Javascript to Refresh the page every 3 seconds -->
         <style>
             body {
             display: flex;
@@ -52,6 +53,7 @@
         }
         .header_right {
             font-size: 54px;
+            color: yellowgreen;
         }
         .indented-image {
             margin-left: 350px;
@@ -70,7 +72,7 @@
             font-size: 18px;
             color: red;
         }
-        .content {
+        .content0 {
       overflow: visible;
       max-height: 200px; /* Adjust the height as needed e.g 200px */
       border: 2px dashed grey;
@@ -79,11 +81,12 @@
        }
 
         </style>
+        
     </head>
     <body>
         <div class="left">
-            <div class="content">
-                <span class="tuts">Tutorial links:</span><br>
+            <div class="content0">
+                <span class="tuts">Tutorial links:</span><br> 
                 <a href="https://www.geeksforgeeks.org/html/" target="_blank">html</a><br>
                 <a href="https://www.geeksforgeeks.org/css/" target="_blank">css</a>
                 <br>
@@ -99,11 +102,11 @@
                 alt="a html logo" 
                 width="145"
                 height="140">
-                <!-- src for source file; alt for alternative text to be displayed in case the image doesn't show -->
-                <!-- for all html tag ref: https://www.w3schools.com/tags/default.asp-->
-                <!--target="_blank" means the link opens in a new tab. other options: parent,self, top-->
+                <!-- src for source file; alt for alternative text to be displayed in case the image doesn't show
+                for all html tag ref: https://www.w3schools.com/tags/default.asp
+                target="_blank" means the link opens in a new tab. other options: parent,self, top-->
             </h1>
-            <p>
+            <p title="Overview" style="color: red;">ABOUT HTML AND CSS
             <hr>
                 HTML stands for <span class="assert">Hypertext Markup Language</span>. It is the standard markup language used for 
                 creating and structuring web pages. HTML uses tags to mark elements within a document
