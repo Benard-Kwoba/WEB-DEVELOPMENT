@@ -7,7 +7,7 @@
             body {
             display: flex;
             justify-content: space-between;
-            background-color: whitesmoke;
+            background-color: black;
         }
         .left {
             display: flex;
@@ -18,9 +18,15 @@
             display: inline;
             overflow-y: hidden;
         }
+        .middle {
+            display: flex;
+            width: 0.5%;
+            background-color: rgba(255, 255, 0, 0.74);
+        }
         .right {
             width: 81%;
             padding: 0%;
+            background-color: orchid;
         }
 
         a {
@@ -51,9 +57,9 @@
             font-size: 21px;
             color: yellow;
         }
-        .header_right {
+        #header_right {
             font-size: 54px;
-            color: yellowgreen;
+            color: yellow;
         }
         .indented-image {
             margin-left: 350px;
@@ -67,6 +73,7 @@
             position: absolute;
             bottom: 100;
             right: 0;
+            width: 91px;
         }
         .tuts-bottom {
             font-size: 18px;
@@ -92,8 +99,9 @@
                 <br>
             </div>
         </div>
+        <div class="middle"></div>
         <div class="right">
-            <h1><span class="header_right">INTRODUCTION TO HTML5 AND CSS3</span><br>
+            <h1><span id="header_right">INTRODUCTION TO HTML5 AND CSS3</span><br>
                 <span class="indented-image"</span><img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-icons-download-14.png" 
                 alt="a html logo" 
                 width="130"
@@ -106,7 +114,7 @@
                 for all html tag ref: https://www.w3schools.com/tags/default.asp
                 target="_blank" means the link opens in a new tab. other options: parent,self, top-->
             </h1>
-            <p title="Overview" style="color: red;">ABOUT HTML AND CSS
+            <p title="Overview" style="color: whitesmoke;">ABOUT HTML AND CSS
             <hr>
                 HTML stands for <span class="assert">Hypertext Markup Language</span>. It is the standard markup language used for 
                 creating and structuring web pages. HTML uses tags to mark elements within a document
