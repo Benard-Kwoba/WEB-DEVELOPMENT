@@ -1,10 +1,10 @@
-# CREATE A FLASK APP
+#________________________________________________FLASK ROUTING AND RENDER_TEMPLATE___________________________________________________________________________
 """
 create a html named "index.html" in "templates" folder in your current python directory. The html should have the following contents:
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="5"> <!-- Refresh the page every 5 seconds -->
+    <meta http-equiv="refresh" content="5"> <!-- Javascript to refresh the page every 5 seconds -->
 </head>
 <body>
     <h1>MY FIRST FLASK APP IS GOOD</h1>
@@ -20,5 +20,35 @@ def data_science():
     return render_template("index.html")  # javascript enabled, for automatic refresh
 if __name__ == "__main__":  # ensures that the following code block is only executed if the module is being run directly
     app.run(debug=True)
+#_________________________________________________FLASK VARIABLES AND URL BINDING__________________________________________________________________
+from flask import Flask, redirect, url_for
+
+app = Flask(__name__)
 
 
+@app.route("/flask_tutorial1/<name>")
+def redirect_func(name):
+    if name.lower() == 'admin':
+        return redirect(url_for('administrator'))
+    else:
+        return redirect(url_for('guests', guest_name = name))
+"""
+The redirect_func function checks if the name parameter is equal to 'admin' (case insensitive).
+If it is, it redirects to the administrator route using the redirect function and url_for function to generate the URL dynamically.
+If the name parameter is not 'admin', it redirects to the guests route and passes the name parameter as guest_name.
+"""
+@app.route("/flask_tutorial1/admin/<admin_password>")
+def administrator(admin_password):
+    if admin_password == 'Banayahu':
+        return 'WELCOME ADMINISTRATOR'
+    else:
+        return 'Wrong administrator password'
+
+@app.route("/flask_tutorial1/guest/<guest_name>")
+def guests(guest_name):
+    return f'WELCOME GUEST!'
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
