@@ -18,7 +18,7 @@
                 overflow-y: hidden;
             }
             .middle {
-                height: 1200px;
+                height: 799px;
                 width: 0.3%;
                 background-color: rgba(255, 255, 0, 0.74);
             }
@@ -26,27 +26,7 @@
                 width: 81%;
                 padding: 0%;
                 background-color: orchid;
-                height: 1200px;
-            }
-            .right-top {
-                height: 60%;
-
-            }
-            .right-middle {
-                height: 37.5%;
-            }   
-            .html-side {
-                padding-left: 1.5px;
-                width: 40%;
-
-            }
-            .final-middle {
-                width: 20%;
-            }
-            .css-side {
-                width: 40%;
-
-
+                height: 799px;
             }
             a {
                 font-style: italic;
@@ -122,77 +102,57 @@
         </div>
         <div class="middle"></div>
         <div class="right">
-            <div class="right-top">
-                <h1><span id="header_right">INTRODUCTION TO HTML5 AND CSS3</span><br>
-                    <span class="indented-image"></span><img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-icons-download-14.png" 
-                    alt="a html logo" 
-                    width="130"
-                    height="130">
-                    <img src="https://brandslogos.com/wp-content/uploads/images/css3-logo-black-and-white.png" 
-                    alt="a html logo" 
-                    width="145"
-                    height="140">
-                </h1>
-                <p title="Overview" style="color: whitesmoke;">ABOUT HTML AND CSS
+            <h1><span id="header_right">INTRODUCTION TO HTML5 AND CSS3</span><br>
+                <span class="indented-image"></span><img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-icons-download-14.png" 
+                alt="a html logo" 
+                width="130"
+                height="130">
+                <img src="https://brandslogos.com/wp-content/uploads/images/css3-logo-black-and-white.png" 
+                alt="a html logo" 
+                width="145"
+                height="140">
+            </h1>
+            <p title="Overview" style="color: whitesmoke;">ABOUT HTML AND CSS
+            <hr>
+                HTML stands for <span class="assert">Hypertext Markup Language</span>. It is the standard markup language used for 
+                creating and structuring web pages. HTML uses tags to mark elements within a document
+                and provides the <span class="assert">structure and content of a webpage.</span>
+                HTML documents are composed of a series of tags enclosed in angle brackets (<>). These
+                tags define the elements of a webpage, such as headings, paragraphs, links, images, lists,
+                tables, forms, and more. Each tag serves a specific purpose and has its own attributes and
+                content.
+            <p>
                 <hr>
-                    HTML stands for <span class="assert">Hypertext Markup Language</span>. It is the standard markup language used for 
-                    creating and structuring web pages. HTML uses tags to mark elements within a document
-                    and provides the <span class="assert">structure and content of a webpage.</span>
-                    HTML documents are composed of a series of tags enclosed in angle brackets (<>). These
-                    tags define the elements of a webpage, such as headings, paragraphs, links, images, lists,
-                    tables, forms, and more. Each tag serves a specific purpose and has its own attributes and
-                    content.
-                <p>
-                    <hr>
-                    CSS3 (Cascading Style Sheets 3) is the latest version of the CSS language used to <span class="assert">define the
-                    presentation and styling of HTML documents.</span> It is an extension of the previous CSS2
-                    specification and introduces new features, capabilities, and improvements to enhance the
-                    design and layout of web pages.
-                    CSS3 includes a wide range of new selectors, properties, and modules that provide more
-                    control over the appearance and behavior of elements. Some key features introduced in
-                    CSS3 include:<br>
-                    <ol>
-                        <li><span class="assert">Selectors</span>: CSS3 introduces advanced selectors that allow for more precise targeting of elements. This includes attribute selectors, structural pseudo-classes, and more.</li>
-                        <li><span class="assert">Box Model</span>: CSS3 provides additional properties and values to control the box model,
-                        such as box-sizing, box-shadow, and border-radius, allowing for more flexible and
-                        visually appealing designs.</li>
-                        <li><span class="assert">Flexible Box Layout (Flexbox)</span>: CSS3 introduces a new layout module called Flexbox, which provides
-                        a flexible way to create responsive and dynamic layouts, especially for building complex navigation
-                        menus and flexible grid systems.</li>
-                        <li><span class="assert">Grid Layout</span>: CSS3 Grid Layout is a powerful layout system that allows for creating two-dimensional
-                        grid-based layouts. It enables more control over the placement and alignment of elements, making it
-                        easier to design complex and responsive layouts.</li>
-                        <li><span class="assert">Transitions and Animations</span>: CSS3 introduces properties like transition and animation, enabling the
-                        creation of smooth transitions between states and the animation of elements, providing more interactivity
-                        and engaging user experiences.</li>
-                        <li><span class="assert">Media Queries</span>: CSS3 enhances media queries, allowing for more targeted styling based on different device
-                        characteristics, such as screen size, resolution, and orientation. This enables responsive web design,
-                        where the layout and styles adapt to different screen sizes.</li>
-                        <li><span class="assert">Transformations</span>: CSS3 introduces 2D and 3D transformations, such as scaling, rotating, skewing, and
-                        translating elements, allowing for creative and interactive effects.</li>
-                        <li><span class="assert">Custom Fonts</span>: CSS3 introduces the @font-face rule, which enables the use of custom fonts on websites,
-                        expanding the range of typography options beyond standard web-safe fonts.</li>
-                    </ol>
-                    <hr>
-            </div>
-            <div class="right-middle">
-                <div class="html-side">
-                    <span style="color: yellow; font-size: 18px;">HTML LESSON CONTENTS</span>
-                    <ol>
-                        <li class="assert2">Introduction to HTML</li>
-                        <li class="assert2">HTML syntax</li>
-                    </ol>
-                </div>
-                <div class="final-middle"></div>
-                <div class="css-side">
-                    <span style="color: yellow; font-size: 18px;">CSS LESSON CONTENTS</span>
-                    <ol>
-                        <li class="assert2">Introduction to CSS</li>
-                        <li class="assert2">CSS syntax</li>
-                    </ol>
-                </div>
-            </div>
-        <hr>
+                CSS3 (Cascading Style Sheets 3) is the latest version of the CSS language used to <span class="assert">define the
+                presentation and styling of HTML documents.</span> It is an extension of the previous CSS2
+                specification and introduces new features, capabilities, and improvements to enhance the
+                design and layout of web pages.
+                CSS3 includes a wide range of new selectors, properties, and modules that provide more
+                control over the appearance and behavior of elements. Some key features introduced in
+                CSS3 include:<br>
+                <ol>
+                    <li><span class="assert">Selectors</span>: CSS3 introduces advanced selectors that allow for more precise targeting of elements. This includes attribute selectors, structural pseudo-classes, and more.</li>
+                    <li><span class="assert">Box Model</span>: CSS3 provides additional properties and values to control the box model,
+                    such as box-sizing, box-shadow, and border-radius, allowing for more flexible and
+                    visually appealing designs.</li>
+                    <li><span class="assert">Flexible Box Layout (Flexbox)</span>: CSS3 introduces a new layout module called Flexbox, which provides
+                    a flexible way to create responsive and dynamic layouts, especially for building complex navigation
+                    menus and flexible grid systems.</li>
+                    <li><span class="assert">Grid Layout</span>: CSS3 Grid Layout is a powerful layout system that allows for creating two-dimensional
+                    grid-based layouts. It enables more control over the placement and alignment of elements, making it
+                    easier to design complex and responsive layouts.</li>
+                    <li><span class="assert">Transitions and Animations</span>: CSS3 introduces properties like transition and animation, enabling the
+                    creation of smooth transitions between states and the animation of elements, providing more interactivity
+                    and engaging user experiences.</li>
+                    <li><span class="assert">Media Queries</span>: CSS3 enhances media queries, allowing for more targeted styling based on different device
+                    characteristics, such as screen size, resolution, and orientation. This enables responsive web design,
+                    where the layout and styles adapt to different screen sizes.</li>
+                    <li><span class="assert">Transformations</span>: CSS3 introduces 2D and 3D transformations, such as scaling, rotating, skewing, and
+                    translating elements, allowing for creative and interactive effects.</li>
+                    <li><span class="assert">Custom Fonts</span>: CSS3 introduces the @font-face rule, which enables the use of custom fonts on websites,
+                    expanding the range of typography options beyond standard web-safe fonts.</li>
+                </ol>
+                <hr>
         </div>
     </body>
 </html>
