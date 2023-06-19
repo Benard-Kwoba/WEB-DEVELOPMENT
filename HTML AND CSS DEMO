@@ -1,184 +1,114 @@
+<!---------------------------------------------------------------------HTML CODE-------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html lang="en-KE">
     <head>
         <title>HTML 5 AND CSS3 COURSE</title>
         <meta http-equiv="refresh" content="3">
-        <style>
-            body {
-                display: flex;
-                justify-content: space-between;
-                background-color: black;
-                height: 1600px;
-            }
-            .left {
-                width: 12%;
-                background-color: black;
-                color: white;
-                padding: 2px;
-                display: inline;
-                overflow-y: hidden;
-                height: 1600px;
-            }
-            .html-topics {
-                height:1600px;
-                padding-left: 0%;
-                width: 34%;
-                background-color: rgba(255, 255, 0, 0.829);
-                
-            }
-            .css-topics {
-                height:1600px;
-                padding-left: 0%;
-                width: 34%;
-                background-color: rgba(179, 255, 0, 0.877);
-                
-            }
-            .main {
-                width: 18%;
-                padding: 0%;
-                background-color: orchid;
-                height: 1600px;
-
-            }
-            a {
-                font-style: italic;
-                color: blue;
-                text-decoration: none;
-            }
-            h2 {
-                text-align: left;
-                padding-left: 10px;
-            }
-            p {
-                line-height: 1.5;
-                text-indent: 0;
-                text-align: left;
-                padding-left: 20px;
-            }
-            mark {
-                background-color: yellow;
-                color: black;
-            }
-            pre {
-                text-align: left;
-                /* note the use of preformated texts*/
-            }
-            .assert {
-                font-style: italic;
-                color: blue;
-            }
-            hr {
-                border: True;  /* omit border to set default, to remove default set to 'none' */
-                border-top: 10px groove black;  /* size, style(e.g dotted, dashed), color */
-                border-width: 100%; /* to fit the width of the page completely */
-                /* also see border-bottom, right, left; border-image*/
-                /* see: <hr style="border-top-width: 1px; border-top-style: solid; border-top-color: #ccc;"> */
-            }
-            ol {
-                list-style-position: inside;
-                padding-right: 0;
-                text-align: left;
-            }
-            .tuts {
-                font-size: 100%;  /*% to occupy entire width, px to increase visibility/appearence*/
-                color: yellow;
-            }
-            .html-page {
-                position: absolute;
-                bottom: 100;
-                left: 70;
-            }
-            .css-page {
-                position: absolute;
-                bottom: 100;
-                right: 0;
-                width: 91px;
-            }
-            .content0 {
-                overflow: visible;
-                max-height: 150px;
-                border: 2px dashed grey;
-                padding: 1px;
-                background-color: black;
-            }
-        </style>
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <link rel="stylesheet" href="html5 and css3 course-styles.css">
     </head>
     <body>
         <div class="left">
             <div class="content0">
-                <span class="tuts">Recommended Tutorial links:</span><br> 
-                <a href="https://www.geeksforgeeks.org/html/" target="_blank">html</a><br>
-                <a href="https://www.geeksforgeeks.org/css/" target="_blank">css</a>
+                <span class="tuts">RECOMMENDED TUTORIAL SITES:</span><br><br> 
+                <!--To use an HTML button as a link, you have to add some JavaScript code.
+                <button onclick="document.location='https://www.geeksforgeeks.org/html/'">HTML Tutorial</button> - opens in current window
+                to open in new window, use window.open()
+                -->
+                <button onclick="window.open('https://www.geeksforgeeks.org/html/', '_blank')">HTML Tutorial</button>
+                <button onclick="window.open('https://www.geeksforgeeks.org/css/', '_blank')">CSS Tutorial</button>
+                <br><br><br>
+            </div><br>
+            <div class="content1">
+                <span class="tuts">LESSON GUIDES:</span>
+                <h5 style="color: aqua;" </style> HTML Lesson Guides:</h5>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Basics</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Forms</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Lists</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Semantic Elements</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML5 Features</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Responsive Web Design with
+                        HTML and CSS</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Embedding External Content</a></li><br>
+                </ul>
+                <h5 style="color: aqua;" </style> CSS Lesson Guides:</h5>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Basics</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Selectors and Specificity</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Layout and Positioning</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Typography</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Box Model and Layout</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Transitions and Animations</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Media Queries</a></li><br>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Frameworks</a></li><br>
+                </ul>
                 <br>
             </div>
         </div>
         <div class="html-topics">
             <h2 title="Topics for proper understanding" style="color: whitesmoke; font-size: large;
             text-align: center;">HTML TUTORIALS<br>
-                <img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-icons-download-14.png" 
+                <img src="images/html.png" 
                 alt="a html logo" 
                 width="130"
                 height="130">
             </h2>
             <hr style="border-top-width: 1px; border-top-style: dashed; border-top-color: #ccc;">
-            <h5 style="color: white; font-weight: bold; padding: 10px;"><em>Click on each item to visit the <mark>best tutorial site</mark></em></h5>
+            <h5 title="Emphasized as important" style="color: white; font-weight: bold; padding: 10px;">
+                <em>Click on each item to visit the <mark>best tutorial site</mark></em></h5>
             <!--You can also use <b>for bold</b> or <strong>for bold and important</strong>-->
             <h2>HTML Basics:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Introduction to HTML elements, tags, styles and attributes.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Creating a basic HTML structure.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML doctype and document structure.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank">Text formatting with headings, paragraphs, and line breaks.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Adding links and images.</a></li>
+                <li>Introduction to HTML elements, tags, styles and attributes.</li>
+                <li>Creating a basic HTML structure.</li>
+                <li>HTML doctype and document structure.</li>
+                <li>Text formatting with headings, paragraphs, and line breaks.</li>
+                <li>Adding links and images.</li>
             </ol>
             <h2>HTML Forms:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Creating and styling HTML forms.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Input types: text, password, checkbox, radio, etc.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Form validation and error handling.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Using labels and placeholders.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Submitting form data.</a></li>
+                <li>Creating and styling HTML forms.</li>
+                <li>Input types: text, password, checkbox, radio, etc.</li>
+                <li>Form validation and error handling.</li>
+                <li>Using labels and placeholders.</li>
+                <li>Submitting form data.</li>
             </ol>
             <h2>HTML Lists:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Creating unordered and ordered lists.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Nesting lists and creating sub-lists.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Customizing list styles with CSS.</a></li>
+                <li>Creating unordered and ordered lists.</li>
+                <li>Nesting lists and creating sub-lists.</li>
+                <li>Customizing list styles with CSS.</li>
             </ol>
             <h2>HTML Semantic Elements:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Understanding semantic HTML and its importance.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Using semantic elements like: &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;main&gt;, 
-                    &lt;footer&gt;, &lt;article&gt;,&lt;header&gt;</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Improving accessibility and search engine optimization (SEO).</a></li>
+                <li>Understanding semantic HTML and its importance.</li>
+                <li>Using semantic elements like: &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;main&gt;, 
+                    &lt;footer&gt;, &lt;article&gt;,&lt;header&gt;</li>
+                <li>Improving accessibility and search engine optimization (SEO).</li>
             </ol>
             <h2>HTML5 Features:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">New HTML5 elements like &lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;svg&gt; etc.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Geolocation API.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Local storage and session storage.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Web Workers and Web Sockets.</a></li>
+                <li>New HTML5 elements like &lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;svg&gt; etc.</li>
+                <li>Geolocation API.</li>
+                <li>Local storage and session storage.</li>
+                <li>Web Workers and Web Sockets.</li>
             </ol>
             <h2>Responsive Web Design with <br>HTML and CSS:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Building responsive layouts using HTML and CSS.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Media queries and breakpoints.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Responsive images and videos.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Mobile-first approach and fluid grids.</a></li>
+                <li>Building responsive layouts using HTML and CSS.</a></li>
+                <li>Media queries and breakpoints.</li>
+                <li>Responsive images and videos.</li>
+                <li>Mobile-first approach and fluid grids.</li>
             </ol>
             <h2>Embedding External Content:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Embedding videos from YouTube or Vimeo.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Including Google Maps.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Integrating social media widgets.</a></li>
-                <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Adding custom code snippets (e.g., JavaScript libraries).</a></li>
+                <li>Embedding videos from YouTube or Vimeo.</li>
+                <li>Including Google Maps.</li>
+                <li>Integrating social media widgets.</li>
+                <li>Adding custom code snippets (e.g., JavaScript libraries).</li>
             </ol>
             <br><br><br><br><br><br><br><br><br><br><br><br>
-            <address style="color: white;font-style: italic; padding-left: 20%;" title="Address">
-                Site Coded By BenaYahu.<br>
-                Email Adress:<br>
-                benardotieno107@gmail.com
-            </address>
         </div>
         <div class="main">
             <p title="About HTML and CSS" style="color: whitesmoke; font-weight: bold; text-align:center; padding-bottom: 0%;">OVERVIEW
@@ -216,12 +146,19 @@
                     characteristics, such as screen size, resolution, and orientation. This enables responsive web designing.</li>
                 </ol><br>
                 <q style="color: rgb(255, 208, 0);font-style: italic; padding-left: 20%;" title="Quote">Education without application is just entertainment</q>
+                <br><br><br><br>
+                <address style="color: white;font-style: italic; padding: 40px 40px 20px 60px;" title="mailto: in Address">
+                    Site Coded By BenaYahu.<br>
+                    Email Adress:<br>
+                    benardotieno107@gmail.com<br><br>
+                    <a style="color: white;" href="mailto:bernard.otieno@eabl.com">Click here to mail your querries</a>
+                </address>
             </p>
         </div>
         <div class="css-topics">
             <h2 title="Topics for proper understanding" style="color: whitesmoke; font-size: large; text-align: center;
             ">CSS TUTORIALS
-                <br><img src="https://brandslogos.com/wp-content/uploads/images/css3-logo-black-and-white.png" 
+                <br><img src="images/css.png"
                 alt="a html logo" 
                 width="145"
                 height="140">
@@ -230,61 +167,178 @@
             <h5 style="color: white; font-weight: bold; padding-left: 10px;"><em>Click on each item to visit the <mark>best tutorial site</mark></em></h5>
             <h2>CSS Basics:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Introduction to CSS and its role in web development.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS syntax and selectors.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Inline styles, internal stylesheets, and external stylesheets.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS box model: margin, padding, border, and content.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS color properties and values.</a></li>
+                <li>Introduction to CSS and its role in web development.</li>
+                <li>CSS syntax and selectors.</li>
+                <li>Inline styles, internal stylesheets, and external stylesheets.</li>
+                <li>CSS box model: margin, padding, border, and content.</li>
+                <li>CSS color properties and values.</li>
             </ol>
             <h2>CSS Selectors and Specificity:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Understanding different types of CSS selectors: element selectors, class selectors, ID selectors, attribute selectors, etc.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Specificity rules and how they determine which styles are applied.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Combining selectors using descendant selectors, child selectors, sibling selectors, etc.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Pseudo-classes and pseudo-elements.</a></li>
+                <li>Understanding different types of CSS selectors: element selectors, class selectors, ID selectors, attribute selectors, etc.</li>
+                <li>Specificity rules and how they determine which styles are applied.</li>
+                <li>Combining selectors using descendant selectors, child selectors, sibling selectors, etc.</li>
+                <li>Pseudo-classes and pseudo-elements.</li>
             </ol>
             <h2>CSS Layout and Positioning:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Building layouts using CSS: block, inline, and inline-block elements.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Positioning elements: static, relative, absolute, fixed, and sticky.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Floats and clearing floats.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS flexbox for flexible layouts.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS grid for grid-based layouts.</a></li>
+                <li>Building layouts using CSS: block, inline, and inline-block elements.</li>
+                <li>Positioning elements: static, relative, absolute, fixed, and sticky.</li>
+                <li>Floats and clearing floats.</li>
+                <li>CSS flexbox for flexible layouts.</li>
+                <li>CSS grid for grid-based layouts.</li>
             </ol>
             <h2>CSS Typography:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Styling text with CSS: font-family, font-size, font-weight, etc.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Text formatting: color, text-decoration, text-align, text-transform, etc.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Working with web fonts and Google Fonts.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Creating responsive typography.</a></li>
+                <li>Styling text with CSS: font-family, font-size, font-weight, etc.</li>
+                <li>Text formatting: color, text-decoration, text-align, text-transform, etc.</li>
+                <li>Working with web fonts and Google Fonts.</li>
+                <li>Creating responsive typography.</li>
             </ol>
             <h2>CSS Box Model and Layout:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Understanding the CSS box model: margin, padding, border, and content.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Box sizing: content-box and border-box.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Box shadows and rounded corners.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Creating responsive and fluid layouts.</a></li>
+                <li>Understanding the CSS box model: margin, padding, border, and content.</li>
+                <li>Box sizing: content-box and border-box.</li>
+                <li>Box shadows and rounded corners.</li>
+                <li>Creating responsive and fluid layouts.</li>
             </ol>
             <h2>CSS Transitions and Animations:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS transitions for smooth state changes.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS animations for creating animated effects.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Keyframes and animation properties.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Timing functions and easing.</a></li>
+                <li>CSS transitions for smooth state changes.</li>
+                <li>CSS animations for creating animated effects.</li>
+                <li>Keyframes and animation properties.</li>
+                <li>Timing functions and easing.</li>
             </ol>
             <h2>CSS Media Queries:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Building responsive designs with media queries.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Targeting different devices and screen sizes.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Mobile-first vs. desktop-first approaches.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Media query best practices.</a></li>
-            </ol>
+                <li>Building responsive designs with media queries.</li>
+                <li>Targeting different devices and screen sizes.</li>
+                <li>Mobile-first vs. desktop-first approaches.</li>
+                <li>Media query best practices.</li>
+            </ol>   
             <h2>CSS Frameworks:</h2>
             <ol>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Introduction to popular CSS frameworks like Bootstrap, Foundation, and Bulma.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Using pre-built CSS components and grids.</a></li>
-                <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Customizing and extending CSS frameworks.</a></li>
+                <li>Introduction to popular CSS frameworks like Bootstrap, Foundation, and Bulma.</li>
+                <li>Using pre-built CSS components and grids.</li>
+                <li>Customizing and extending CSS frameworks.</li>
             </ol>
         </div>
     </body>
 </html>
+<!---------------------------------------------------------------------CSS CODE-------------------------------------------------------------------------->
+body {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 1600px;
+}
+.left {
+    width: 12%;
+    background-color: rgba(250, 250, 0, 0.7);
+    color: white;
+    padding: 2px;
+    display: inline;
+    overflow-y: hidden;
+    height: 1600px;
+}
+.html-topics {
+    height:1600px;
+    padding-left: 0%;
+    width: 34%;
+    background-color: rgba(179, 255, 0, 0.877);  /*0.877 means 87.77% transparent*/
+    
+}
+.css-topics {
+    height:1600px;
+    padding-left: 0%;
+    width: 34%;
+    background-color: rgba(179, 255, 0, 0.877);
+    
+}
+.main {
+    width: 18%;
+    padding: 0%;
+    background-color: orchid;
+    height: 1600px;
+
+}
+a:link, a:visited {
+    background-color: brown;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: green;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+  }
+h2 {
+    text-align: left;
+    padding-left: 10px;
+}
+p {
+    line-height: 1.5;
+    text-indent: 0;
+    text-align: left;
+    padding-left: 20px;
+}
+mark {
+    background-color: yellow;
+    color: black;
+}
+pre {
+    text-align: left;
+    /* note the use of preformated texts*/
+}
+.assert {
+    font-style: italic;
+    color: blue;
+}
+hr {
+    border: True;  /* omit border to set default, to remove default set to 'none' */
+    border-top: 10px groove black;  /* size, style(e.g dotted, dashed), color */
+    border-width: 100%; /* to fit the width of the page completely */
+    /* also see border-bottom, right, left; border-image
+    see: <hr style="border-top-width: 1px; border-top-style: solid; border-top-color: #ccc;"> 
+    */
+}
+ol {
+    list-style-position: inside;
+    padding-right: 0;
+    text-align: left;
+}
+.tuts {
+    font-size: 100%;  /*% to occupy entire width, px to increase visibility/appearence*/
+    color: yellow;
+}
+.html-page {
+    position: absolute;
+    bottom: 100;
+    left: 70;
+}
+.css-page {
+    position: absolute;
+    bottom: 100;
+    right: 0;
+    width: 91px;
+}
+.content0 {
+    overflow: visible;
+    border: 2px dashed grey;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+}
+.content1 {
+    overflow: visible;
+    border: 2px dashed grey;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+}
