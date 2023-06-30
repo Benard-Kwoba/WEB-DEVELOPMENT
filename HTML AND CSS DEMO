@@ -3,10 +3,12 @@
 <html lang="en-KE">
     <head>
         <title>HTML 5 AND CSS3 COURSE</title>
-        <meta http-equiv="refresh" content="3">
+        <meta http-equiv="refresh" content="10">
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
         <link rel="stylesheet" href="html5 and css3 course-styles.css">
+        <script src="htmlcss1.js"></script>
     </head>
     <body>
         <div class="nav">
@@ -15,7 +17,7 @@
         </div>
         <div class="left">
             <div class="content0">
-                <span id="jumping" class="tuts">RECOMMENDED TUTORIAL SITES:</span><br><br> 
+                <span class="tuts">RECOMMENDED TUTORIAL SITES:</span><br><br> 
                 <!--To use an HTML button as a link, you have to add some JavaScript code.
                 <button onclick="document.location='https://www.geeksforgeeks.org/html/'">HTML Tutorial</button> - opens in current window
                 to open in new window, use window.open()
@@ -28,39 +30,46 @@
                 <span class="tuts">LESSON GUIDES:</span>
                 <h5 style="color: aqua;" </style> HTML Lesson Guides:</h5>
                 <ul>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Basics</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Forms</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Lists</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Semantic Elements</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML5 Features</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Responsive Web Design with
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Basics</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Forms</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Lists</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML Semantic Elements</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">HTML5 Features</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Responsive Web Design with
                         HTML and CSS</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Embedding External Content</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Embedding External Content</a></li>
                 </ul>
                 <h5 style="color: aqua;" </style> CSS Lesson Guides:</h5>
                 <ul>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Basics</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Selectors and Specificity</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Layout and Positioning</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Typography</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Box Model and Layout</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Transitions and Animations</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Media Queries</a></li><br>
-                    <li><a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Frameworks</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Basics</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Selectors and Specificity</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Layout and Positioning</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Typography</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Box Model and Layout</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Transitions and Animations</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Media Queries</a></li><br>
+                    <li><a style="text-align: left;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">CSS Frameworks</a></li><br>
                 </ul>
                 <br>
+            </div><br>
+            <div class="content2">
+                <!--Space for additional information-->
             </div>
         </div>
         <div class="html-topics">
             <h2 title="Topics for proper understanding" style="color: whitesmoke; font-size: large;
             text-align: center;">HTML TUTORIALS<br>
+            <picture>
+                <source media="(max-width: 1600px)" srcset="images/html.png">
+                <source media="(max-width: 720px)" srcset="images/html2.png">
                 <img src="images/html.png" 
                 alt="a html logo" 
                 style="width: 130px; height: 130px;">
+            </picture>
             </h2>
             <hr style="border-top-width: 1px; border-top-style: dashed; border-top-color: #ccc;">
             <h5 title="Emphasized as important" style="color: white; font-weight: bold; padding: 10px;">
-                <em>Click on each item to visit the <mark>best tutorial site</mark></em></h5>
+                <em>Click on Lesson Guides to visit the <mark>best tutorial site</mark></em></h5>
             <!--You can also use <b>for bold</b> or <strong>for bold and important</strong>-->
             <h2>HTML Basics:</h2>
             <ol>
@@ -112,10 +121,6 @@
                 <li>Integrating social media widgets.</li>
                 <li>Adding custom code snippets (e.g., JavaScript libraries).</li>
             </ol>
-            <br><br><br><br><br><br><br><br><br>
-            <p>
-                <a title="html Bookmark" style="padding: 2px; margin: 99px 50px 1px 180px;" href="#jumping">Jump to Top</a>
-            </p>
         </div>
         <div class="main">
             <p title="About HTML and CSS" style="color: whitesmoke; font-weight: bold; text-align:center; padding-bottom: 0%;">OVERVIEW
@@ -153,27 +158,41 @@
                     characteristics, such as screen size, resolution, and orientation. This enables responsive web designing.</li>
                 </ol>
                 <hr>
-                <q style="color: rgb(255, 208, 0);font-style: italic; padding-left: 20%; text-decoration: underline;" title="Quote">Learn By Creating</q>
-                <img title="image in another folder" src="images/html&css.png" 
-                alt="html and css image" 
-                style="width: 100px; height: 100px; padding: 5.9px 20px 2px 75px;"><br><br><br>
-                <address style="color: white;font-style: italic; padding: 5px 40px 20px 25px;" title="mailto: in Address">
+                <q style="color: white;font-style: italic; padding-left: 20%; text-decoration: underline;" title="Quote">Learn By Creating</q>
+                <img
+                title="js mapped image in another folder" src="images/html&css.png" alt="html and css image" usemap="#htmlcss"
+                style="width: 250px; height: 200px;
+                padding: 5.9px 20px 2px 20px;">
+                <map name="htmlcss">
+                    <area shape="rect" coords="25,45,120,185" alt="css" href="https://www.w3schools.com/html/default.asp" target="_blank" onclick="linkalertjs()">
+                    <area shape="rect" coords="170,45,250,185" alt="css" href="https://www.w3schools.com/css/default.asp" target="_blank" onclick="linkalertjs()">
+                </map>
+                <br><br><br><br><br><br><br>
+                <address style="color: white;font-style: italic; padding: 5px 40px 20px 25px;
+                background-image: url('images/background-address.png');
+                background-repeat: no-repeat;"
+                title="mailto: in Address with background image">
                     Site Coded By BenaYahu.<br>
-                    Email Adress:
-                    benardotieno107@gmail.com<br><br>
-                    <a style="color: white;" href="mailto:bernard.otieno@eabl.com">Click here to mail your querries</a>
+                    Email Adress:<br>
+                    benardotieno107@gmail.com
+                    <a style="color: white; text-align: left;" href="mailto:benardotieno107@gmail.com">Click here to mail your querries</a>
                 </address>
             </p>
         </div>
         <div class="css-topics">
-            <h2 title="Topics for proper understanding" style="color: whitesmoke; font-size: large; text-align: center;
+            <h2 id="jumping"  title="Topics for proper understanding" style="color: whitesmoke; font-size: large; text-align: center;
             ">CSS TUTORIALS
-                <br><img src="images/css.png"
-                alt="a html logo" 
-                style="width: 145px; height: 140px;">
+                <br>
+                <picture>
+                    <source media="(max-width: 1600px)" srcset="images/css.png">
+                    <source media="(max-width: 720px)" srcset="images/css2.png">
+                    <img src="images/css.png"
+                    alt="a html logo" 
+                    style="width: 145px; height: 140px;">
+                </picture>
             </h2>
             <hr style="border-top-width: 1px; border-top-style: solid; border-top-color: #cccccc;">
-            <h5 style="color: white; font-weight: bold; padding-left: 10px;"><em>Click on each item to visit the <mark>best tutorial site</mark></em></h5>
+            <h5 style="color: white; font-weight: bold; padding-left: 10px;"><em>Click on Lesson Guides to visit the <mark>best tutorial site</mark></em></h5>
             <h2>CSS Basics:</h2>
             <ol>
                 <li>Introduction to CSS and its role in web development.</li>
@@ -231,63 +250,195 @@
                 <li>Using pre-built CSS components and grids.</li>
                 <li>Customizing and extending CSS frameworks.</li>
             </ol>
+            <p>
+                <a title="html Bookmark" style="padding: 1px; margin: 100px 100px 1px 300px;" href="#jumping">Jump to Top</a>
+            </p>
+        </div>
+        <div class="htmlcss-tables">
+            <h3 style="color: whitesmoke; font-weight: bold; text-align:center; padding-top:1%;" >HTML AND CSS RESOURCES</h1>
+            <table style="width:90%; margin-left:4.5%;">
+                <tr>
+                    <th>HTML SITE NAME</th>
+                    <th>SITE URL</th>
+                    <th>CSS SITE NAME</th>
+                    <th>SITE URL</th>
+                </tr>
+                <tr>
+                    <td>W3SCHOOLS</td>
+                    <td>https://www.w3schools.com/html/default.asp/</td>
+                    <td>W3SCHOOLS</td>
+                    <td>https://www.w3schools.com/css/default.asp/</td>
+                </tr>
+                <tr>
+                    <td>MDN WEB DOCS</td>
+                    <td>https://developer.mozilla.org/en-US/docs/Learn/HTML</td>
+                    <td>MDN WEB DOCS</td>
+                    <td>https://developer.mozilla.org/en-US/docs/Learn/CSS</td>
+                </tr>
+                <tr>
+                    <td>TUTORIALS POINT</td>
+                    <td>https://www.tutorialspoint.com/html/index.htm</td>
+                    <td>GEEKS FOR GEEKS</td>
+                    <td>https://www.geeksforgeeks.org/css/</td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
-<!---------------------------------------------------------------------CSS CODE-------------------------------------------------------------------------->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------CSS CODE-------------------------------------------------------------------------->
 .nav {
-    background-color: cyan;
+    background-color: chocolate;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    height: 84px;
     width: 100%;
+    position: fixed;
+    top: 0px;   
+    z-index: 999; 
+    /*z-index value of 999 is a commonly used high value that is often used to ensure that
+    an element appears on top of most other elements on a web page.*/
 }
 body {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    height: 1600px;
+    height: 3500px;
 }
 .left {
-    width: 14.5%;
+    width: 14.9%;
     background-color: rgba(250, 250, 0, 0.7);
-    color: white;
-    padding: 2px;
+    color: black;
+    padding-top: 0px;
     display: inline;
-    overflow-y: hidden;
-    height: 1600px;
+    height: 880px;
     margin-top: 76px;
-    position: absolute;
+    overflow-y: scroll;
+    position: fixed;
 }
 .html-topics {
-    height:1600px;
-    padding-left: 0%;
-    width: 31.8%;
+    height:1650px;
+    width: 28.45%;
     background-color: rgba(179, 255, 0, 0.877);  /*0.877 means 87.77% transparent*/
     margin-top: 76px;
-    margin-left: 237px;
+    display: inline-block;
+    margin-left: 235px;
     position: absolute;
 }
 .css-topics {
-    height:1600px;
-    padding-left: 0%;
-    width: 33.65%;
+    height:1650px;
+    width: 32.83%;
     margin-top: 76px;
+    display: inline-block;
     background-color: rgba(179, 255, 0, 0.877);
-    margin-left: 1033px;
+    margin-left: 1055.5px;
     position: absolute;
     margin-right: 85px;
+
     
 }
 .main {
-    width: 18%;
-    padding: 0%;
+    width: 23.22%;
     margin-top: 76px;
     background-color: orchid;
-    height: 1600px;
-    margin-left: 744px;
+    height: 1650px;
+    margin-left: 687.1px;
     position: absolute;
+    display: inline-block;
 
 }
 a:link, a:visited {
@@ -296,21 +447,20 @@ a:link, a:visited {
     padding: 3px 7px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-  }
-  
-  a:hover, a:active {
+    display: block; /*see inline-block*/
+}
+a:hover, a:active {
     background-color: green;
-  }
+}
   
-  a:active {
+a:active {
     color: yellow;
     background-color: transparent;
     text-decoration: none;
-  }
+}
 h2 {
     text-align: left;
-    padding-left: 10px;
+
 }
 p {
     line-height: 1.5;
@@ -328,7 +478,7 @@ pre {
 }
 .assert {
     font-style: italic;
-    color: blue;
+    color: white;
 }
 hr {
     border: True;  /* omit border to set default, to remove default set to 'none' */
@@ -347,27 +497,65 @@ ol {
     font-size: 100%;  /*% to occupy entire width, px to increase visibility/appearence*/
     color: yellow;
 }
-.html-page {
-    position: absolute;
-    bottom: 100;
-    left: 70;
-}
-.css-page {
-    position: absolute;
-    bottom: 100;
-    right: 0;
-    width: 91px;
-}
+
 .content0 {
     overflow: visible;
     border: 2px dashed grey;
     padding: 5px;
     background-color: rgb(0, 0, 0);
+    height: 100px;
 }
 .content1 {
     overflow: visible;
     border: 2px dashed grey;
-    padding: 5px;
+    padding: 3px;
     background-color: rgb(0, 0, 0);
+    height: 900px;
+}
+.content2 {
+    overflow: visible;
+    border: 2px dashed grey;
+    padding: 3px;
+    background-color: rgb(0, 0, 0);
+    height: 650px;
+}
+.htmlcss-tables {
+    background-color: rgba(179, 255, 0, 0.877);
+    width: 100%;
+    height: 600px;
+    margin-top: 1727px;
+    margin-left: 236px;
+    display: inline-block;
+    margin-right: -7.5px;
+    border-top: 10px groove black;
+}
+table, th {
+    border: solid black;
+    text-align: left;
+}
+td {
+    color: white;
+    border:1px dotted black
 }
 
+
+
+
+
+
+<!---------------------------------------------------------------------------JAVASCRIPT------------------------------------------------------------>
+
+window.onload = function() {
+    var leftPart = document.querySelector('.left');
+    leftPart.addEventListener('wheel', function(e) {
+        var delta = Math.sign(e.deltaY);
+        leftPart.scrollTop += delta * 30;
+        e.preventDefault();
+    });
+};
+function linkalertjs () {
+    alert("You clicked on tutorial site");
+}
+    
+  
+  
