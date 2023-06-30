@@ -11,10 +11,22 @@
         <script src="htmlcss1.js"></script>
     </head>
     <body>
-        <div class="nav">
-            <input type="text" placeholder="Search...">
-            <button>Search</button><br>
-        </div>
+        <header>
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a style="text-align: left; background-color: black;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Home</a></li>
+                        <li><a style="text-align: left; background-color: black;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">News</a></li>
+                        <li><a style="text-align: left; background-color: black;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Contacts</a></li>
+                        <li><a style="text-align: left; background-color: black;" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">About</a></li>
+                    </ul> 
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button><br>
+                </div>     
+            </nav>
+        </header>
         <div class="left">
             <div class="content0">
                 <span class="tuts">RECOMMENDED TUTORIAL SITES:</span><br><br> 
@@ -381,18 +393,66 @@
 
 
 <!---------------------------------------------------------------------CSS CODE-------------------------------------------------------------------------->
-.nav {
+
+/* CSS for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    /* Add responsive styles for smaller screens here */
+  }
+  
+  /* CSS for screens with a maximum width of 480px */
+  @media screen and (max-width: 480px) {
+    /* Add responsive styles for mobile devices here */
+  }
+
+nav {
     background-color: chocolate;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 84px;
+    list-style-type: none;
+    height: 11.9vh;
     width: 100%;
     position: fixed;
-    top: 0px;   
+    top: 0%; 
+    left: 0;
     z-index: 999; 
     /*z-index value of 999 is a commonly used high value that is often used to ensure that
     an element appears on top of most other elements on a web page.*/
 }
+.nav-links{
+    list-style-type: none;
+    display: flex;
+
+
+}
+.nav-links ul {
+    display: flex;
+}
+.nav-links li {
+    margin-right: 30px;
+}
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    nav {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav-links {
+      margin-top: 5px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+}
+
+
 body {
     display: flex;
     justify-content: space-between;
@@ -409,6 +469,7 @@ body {
     margin-top: 76px;
     overflow-y: scroll;
     position: fixed;
+    left: 0;
 }
 .html-topics {
     height:1650px;
@@ -418,6 +479,7 @@ body {
     display: inline-block;
     margin-left: 235px;
     position: absolute;
+    left: 0;
 }
 .css-topics {
     height:1650px;
@@ -428,6 +490,7 @@ body {
     margin-left: 1055.5px;
     position: absolute;
     margin-right: 85px;
+    left: 0;
 
     
 }
@@ -439,6 +502,7 @@ body {
     margin-left: 687.1px;
     position: absolute;
     display: inline-block;
+    left: 0;
 
 }
 a:link, a:visited {
@@ -537,6 +601,35 @@ td {
     color: white;
     border:1px dotted black
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
