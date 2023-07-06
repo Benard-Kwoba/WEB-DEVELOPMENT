@@ -1,54 +1,206 @@
-#________________________________________________FLASK ROUTING AND RENDER_TEMPLATE___________________________________________________________________________
-"""
-create a html named "index.html" in "templates" folder in your current python directory. The html should have the following contents:
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="refresh" content="5"> <!-- Javascript to refresh the page every 5 seconds -->
-</head>
-<body>
-    <h1>MY FIRST FLASK APP IS GOOD</h1>
-</body>
-</html>
-"""
-from flask import  Flask, render_template
+#________________________________________________PYTHON FLASK CODE___________________________________________________________________________
+from flask import Flask, url_for, redirect, request, render_template
+from datetime import date
+from datetime import timedelta
 
-app = Flask(__name__)  # Flask constructor takes the name of current module (__name__) as argument
+var= {f"Operations Date\n({date.today() - timedelta(days=1)})": 'Quantity(cases)',
+            'Beer:': 25.36,
+            'Keg:': 5577,
+            'Total': 5602.36
+            }
 
-@app.route("/")  # route()- a decorator, tells the application which URL should call the associated function.
-def data_science():
-    return render_template("index.html")  # javascript enabled, for automatic refresh
-if __name__ == "__main__":  # ensures that the following code block is only executed if the module is being run directly
-    app.run(debug=True)
-#_________________________________________________FLASK VARIABLES AND URL BINDING__________________________________________________________________
-from flask import Flask, redirect, url_for
 
 app = Flask(__name__)
 
 
-@app.route("/flask_tutorial1/<name>")
-def redirect_func(name):
-    if name.lower() == 'admin':
+@app.route(rule="/flask_tutorial1/<user_input>")
+def inventory_redirect(user_input):
+    if user_input == 'admin':
         return redirect(url_for('administrator'))
+    elif user_input == 'main':
+        return redirect(url_for('main'))
+    elif user_input == 'trial':
+        return redirect(url_for('trial'))
     else:
-        return redirect(url_for('guests', guest_name = name))
-"""
-The redirect_func function checks if the name parameter is equal to 'admin' (case insensitive).
-If it is, it redirects to the administrator route using the redirect function and url_for function to generate the URL dynamically.
-If the name parameter is not 'admin', it redirects to the guests route and passes the name parameter as guest_name.
-"""
-@app.route("/flask_tutorial1/admin/<admin_password>")
-def administrator(admin_password):
-    if admin_password == 'Banayahu':
-        return 'WELCOME ADMINISTRATOR'
-    else:
-        return 'Wrong administrator password'
+        return '''
+<h2><b>NEW VISITOR?</b></h2>
 
-@app.route("/flask_tutorial1/guest/<guest_name>")
-def guests(guest_name):
-    return f'WELCOME GUEST!'
+<h3>Welcome to the page</h3>
+<p>---If you are the <i>administrator</i>, use the URL: <br><strong><u>/flask_tutorial1/admin</strong></u><br>
+Where you will be prompted to enter your administrator password.<br><br>
+---If you are a <i>guest</i>, use the guest URL: <br><strong><u>/flask_tutorial1/main</strong></u>
+<p/> 
+'''
+
+
+@app.route(rule='/flask_tutorial1/admin/', methods=['GET', 'POST'])  # HTTP methods use upper case
+def administrator():
+    global var
+    if request.method == 'POST':
+        password = request.form.get('password')
+        if password == 'Benayahu':
+            return render_template('ncd-main.html', result=var)
+        else:
+            return f'''
+Wrong password!!!<br><br>
+<b>Kindly use the correct admin password</b>
+'''
+    else:
+        return render_template("admin-loging-page.html")
+
+
+@app.route(rule='/flask_tutorial1/main/')
+def main():
+    global var
+    return render_template('ncd-main.html', result=var)
+
+@app.route(rule='/flask_tutorial1/trial/')
+def result():
+    pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+#________________________________________________END OF FLASK CODE_________________________________________________________________________________________________________
+#________________________________________________HTML CODE(/STATIC FOLDER HAS IMAGES, CSS AND JS FILES, HTML FILE IN 'templates' folder)____________________________________
+<!DOCTYPE HTML>
+<html lang="en-KE">
+    <head>
+        <title>NCD BEER AND KEG</title>
+        <style>
+            body {
+                background-color: black; 
+            }
+
+            .background-image {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('/static/main bg.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation: fadeBackground 2s linear forwards;
+            }
+            table {
+            width: 20px;
+            height: 20px;
+            border-radius: 18px;
+            font-size: small;
+            background-color: wheat;
+            position: relative;
+            border-collapse: collapse;
+            animation: table-var 5s linear 2s infinite alternate;
+            }
+            @keyframes fadeBackground {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes table-var {
+            0% {background-color:white; left:88%; top:400px;}
+            25% {background-color:yellow; left:90%; top:400px;}
+            50% {background-color:rgb(151, 151, 247); left:90%; top:380px;}
+            75% {background-color:green; left:88%; top:380px;}
+            100% {background-color:palevioletred; left:88%; top:400px;}
+            }
+            @keyframes main-face-title {
+                0%  {color:red; margin: 50%}
+                25%  {color:yellow; left:50px; top:0px;}
+                50%  {color:blue; left:200px; top:200px;}
+                75%  {color:green; left:0px; top:200px;}
+                100% {color:red; left:0px; top:0px;}
+            }
+            h2 {
+                margin: 25% 10% 1% 44%;
+                color: white(254, 6, 47);
+                animation-name: main-face-title;
+                animation-duration: 2s;
+                animation-delay: 0.5s;
+                animation-iteration-count: 1; /*will run the animation 1 time before it stops*/
+                animation-direction: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background-image"></div>
+        <h2 style="
+        color:white;
+        text-align: center;
+        margin: 30px 20px 100px 100px;
+        ">NCD BEER AND KEG PERFORMANCE
+        </h2>
+    </body>
+    <table border = 1>
+        <caption style="color: white; font-size: small;">NCD BEER VARIANCES</caption>
+        {% for key, value in result.items() %}
+        <tr>
+            <th> {{ key }} </th>
+            <td> {{ value }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+#________________________________________________END OF HTML______________________________________________________________________________
+
+
+
