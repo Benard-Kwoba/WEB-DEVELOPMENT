@@ -1,17 +1,41 @@
-#________________________________________________PYTHON FLASK CODE___________________________________________________________________________
-from flask import Flask, url_for, redirect, request, render_template
-from datetime import date
-from datetime import timedelta
+from flask import Flask, url_for, redirect, request, render_template, make_response
+from datetime import date, timedelta
+import openpyxl
+import warnings
+import bcrypt
 
-var= {f"Operations Date\n({date.today() - timedelta(days=1)})": 'Quantity(cases)',
-            'Beer:': 25.36,
-            'Keg:': 5577,
-            'Total': 5602.36
-            }
+#____________________________________data mining and cleaning___________________________________________________
+warnings.filterwarnings("ignore", message="DrawingML support is incomplete and limited to charts and images only. Shapes and drawings will be lost.")
 
+# Load the Excel file
+workbook = openpyxl.load_workbook(r'C:\Users\OtienBer\anaconda3\Lib\venv\NI1 RECON WORKSHEET RUNNING.xlsm')
 
+# Select the worksheet- change daily to reflect recon date
+worksheet = workbook['05.09.2023']
+
+# Read the value in main recon sheet
+beer_value = worksheet['FU39'].value
+keg_value = worksheet['FU38'].value
+totals = beer_value + keg_value
+
+# images at https://www.freepik.com/photos/beer
+
+var = {f"Operations Date\n({date.today() - timedelta(days=1)})": 'Quantity(cases)',
+       'Beer:': round(float(beer_value), 2),
+       'Keg:': round(float(keg_value), 2),
+       'Total': round(float(totals), 2)
+       }
+workbook.close()
+
+# Store user IDs and hashed passwords in a dictionary
+user_credentials = {
+    'benard.kwoba@agl.com': bcrypt.hashpw('Ramjaane'.encode('utf-8'), bcrypt.gensalt()),
+    'user2': bcrypt.hashpw('password2'.encode('utf-8'), bcrypt.gensalt()),
+    'user3': bcrypt.hashpw('password3'.encode('utf-8'), bcrypt.gensalt())
+}
+
+#_____________________________________________________app routing_____________________________________________________
 app = Flask(__name__)
-
 
 @app.route(rule="/flask_tutorial1/<user_input>")
 def inventory_redirect(user_input):
@@ -19,8 +43,14 @@ def inventory_redirect(user_input):
         return redirect(url_for('administrator'))
     elif user_input == 'main':
         return redirect(url_for('main'))
+    elif user_input == 'agl-ncd':
+        return redirect(url_for('users_loging_page'))
     elif user_input == 'trial':
         return redirect(url_for('trial'))
+    elif user_input == 'cookies':  # entering cookies which will be posted by set_cookies()
+        return redirect(url_for('cookies_page'))
+    elif user_input == 'getcookies':  # displaying the cookies
+        return redirect(url_for('get_cookies'))
     else:
         return '''
 <h2><b>NEW VISITOR?</b></h2>
@@ -32,14 +62,13 @@ Where you will be prompted to enter your administrator password.<br><br>
 <p/> 
 '''
 
-
+# _________________________________________________________decorated urls______________________________________________
 @app.route(rule='/flask_tutorial1/admin/', methods=['GET', 'POST'])  # HTTP methods use upper case
 def administrator():
-    global var
-    if request.method == 'POST':
-        password = request.form.get('password')
-        if password == 'Benayahu':
-            return render_template('ncd-main.html', result=var)
+    if request.method == 'POST':  # indicates that the function is expecting data to be sent through an HTML form
+        admin_password = request.form.get('password')  #  retrieves the value of the 'password' field from the submitted form
+        if admin_password == 'Benayahu':
+            return render_template('admin-controls-page.html')
         else:
             return f'''
 Wrong password!!!<br><br>
@@ -49,18 +78,68 @@ Wrong password!!!<br><br>
         return render_template("admin-loging-page.html")
 
 
-@app.route(rule='/flask_tutorial1/main/')
+@app.route(rule='/flask_tutorial1/main/', methods=['GET', 'POST'])
 def main():
     global var
-    return render_template('ncd-main.html', result=var)
+    if request.method == 'POST':
+        user_data = {
+            'user_id': request.form.get('user_id'),
+            'password': request.form.get('password')
+        }
+        # Check if user ID exists in the user_credentials dictionary
+        if user_data['user_id'] in user_credentials:
+            # Verify the password using bcrypt
+            if bcrypt.checkpw(user_data['password'].encode('utf-8'), user_credentials[user_data['user_id']]):
+                return render_template("admin-controls-page.html", result=var)
 
-@app.route(rule='/flask_tutorial1/trial/')
-def result():
-    pass
+        # If either user ID or password is incorrect, deny access
+        return '''
+                Wrong user ID or password!!!<br><br>
+                <b>Kindly use the correct credentials</b>
+                '''
+    else:
+        return render_template('ncd-main.html', result=var)
 
 
+@app.route(rule='/flask_tutorial1/agl-ncd/', methods=['GET', 'POST'])
+def users_login_page():
+    global var
+    if request.method == 'POST':
+        user_id = request.form.get('user_id')
+        user_password = request.form.get('password')
+        # Check if user ID exists in the user_credentials dictionary
+        if user_id in user_credentials:
+            # Verify the password using bcrypt
+            if bcrypt.checkpw(user_password.encode('utf-8'), user_credentials[user_id]):
+                return render_template("ncd-main.html", result=var)
+
+        # If either user ID or password is incorrect, deny access
+        return '''
+                Wrong user ID or password!!!<br><br>
+                <b>Kindly use the correct credentials</b>
+                '''
+    else:
+        return render_template('users-loging-page.html')
 
 
+@app.route(rule='/flask_tutorial1/cookies/')
+def cookies_page():
+    return render_template('example-on-cookies.html')
+
+
+@app.route(rule='/flask_tutorial1/setcookies/', methods=['GET', 'POST'])
+def set_cookies():
+    if request.method == 'POST':
+        user = request.form['nm']
+        resp = make_response(render_template('readcookie.html'))  # readcookie.html redirects to getcookies url
+        resp.set_cookie('userID', user)
+
+        return resp
+
+@app.route(rule='/flask_tutorial1/getcookies/', methods=['GET'])
+def get_cookies():
+   name = request.cookies.get('userID')
+   return render_template('cookies.html', name=name)
 
 
 
@@ -105,102 +184,3 @@ def result():
 
 if __name__ == "__main__":
     app.run(debug=True)
-#________________________________________________END OF FLASK CODE_________________________________________________________________________________________________________
-#________________________________________________HTML CODE(/STATIC FOLDER HAS IMAGES, CSS AND JS FILES, HTML FILE IN 'templates' folder)____________________________________
-<!DOCTYPE HTML>
-<html lang="en-KE">
-    <head>
-        <title>NCD BEER AND KEG</title>
-        <style>
-            body {
-                background-color: black; 
-            }
-
-            .background-image {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url('/static/main bg.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                animation: fadeBackground 2s linear forwards;
-            }
-            table {
-            width: 20px;
-            height: 20px;
-            border-radius: 18px;
-            font-size: small;
-            background-color: wheat;
-            position: relative;
-            border-collapse: collapse;
-            animation: table-var 5s linear 2s infinite alternate;
-            }
-            @keyframes fadeBackground {
-                0% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0;
-                }
-            }
-            @keyframes table-var {
-            0% {background-color:white; left:88%; top:400px;}
-            25% {background-color:yellow; left:90%; top:400px;}
-            50% {background-color:rgb(151, 151, 247); left:90%; top:380px;}
-            75% {background-color:green; left:88%; top:380px;}
-            100% {background-color:palevioletred; left:88%; top:400px;}
-            }
-            @keyframes main-face-title {
-                0%  {color:red; margin: 50%}
-                25%  {color:yellow; left:50px; top:0px;}
-                50%  {color:blue; left:200px; top:200px;}
-                75%  {color:green; left:0px; top:200px;}
-                100% {color:red; left:0px; top:0px;}
-            }
-            h2 {
-                margin: 25% 10% 1% 44%;
-                color: white(254, 6, 47);
-                animation-name: main-face-title;
-                animation-duration: 2s;
-                animation-delay: 0.5s;
-                animation-iteration-count: 1; /*will run the animation 1 time before it stops*/
-                animation-direction: normal;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="background-image"></div>
-        <h2 style="
-        color:white;
-        text-align: center;
-        margin: 30px 20px 100px 100px;
-        ">NCD BEER AND KEG PERFORMANCE
-        </h2>
-    </body>
-    <table border = 1>
-        <caption style="color: white; font-size: small;">NCD BEER VARIANCES</caption>
-        {% for key, value in result.items() %}
-        <tr>
-            <th> {{ key }} </th>
-            <td> {{ value }} </td>
-        </tr>
-        {% endfor %}
-    </table>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-#________________________________________________END OF HTML______________________________________________________________________________
-
-
-
