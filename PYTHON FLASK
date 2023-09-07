@@ -1,6 +1,7 @@
 from flask import Flask, url_for, redirect, request, render_template, make_response
 from datetime import date, timedelta
 import openpyxl
+import json
 import warnings
 import bcrypt
 
@@ -29,10 +30,27 @@ workbook.close()
 
 # Store user IDs and hashed passwords in a dictionary
 user_credentials = {
-    'benard.kwoba@agl.com': bcrypt.hashpw('Ramjaane'.encode('utf-8'), bcrypt.gensalt()),
-    'user2': bcrypt.hashpw('password2'.encode('utf-8'), bcrypt.gensalt()),
-    'user3': bcrypt.hashpw('password3'.encode('utf-8'), bcrypt.gensalt())
+    'james.reynard@abl.com': bcrypt.hashpw('Rey44@254'.encode('utf-8'), bcrypt.gensalt()),
+    'kennedy.waweru@abl.com': bcrypt.hashpw('Wawesh75..'.encode('utf-8'), bcrypt.gensalt()),
+    '13454': bcrypt.hashpw('reasonalbe254'.encode('utf-8'), bcrypt.gensalt()),
+    'hellen.wambui@abl.com': bcrypt.hashpw('Chocolate.654'.encode('utf-8'), bcrypt.gensalt())
 }
+# Convert the hashed passwords from bytes to strings
+user_credentials_str = {
+    user: hashed.decode('utf-8') for user, hashed in user_credentials.items()
+}
+
+# Specify the file path where you want to save the JSON data
+json_file_path = 'user_credentials.json'
+
+# Open the file in write mode and write the dictionary as JSON
+with open(json_file_path, 'w') as json_file:
+    json.dump(user_credentials_str, json_file)
+
+# Load the user_credentials from the JSON file
+with open(json_file_path, 'r') as json_file:
+    user_credentials = json.load(json_file)
+
 
 #_____________________________________________________app routing_____________________________________________________
 app = Flask(__name__)
@@ -89,8 +107,9 @@ def main():
         # Check if user ID exists in the user_credentials dictionary
         if user_data['user_id'] in user_credentials:
             # Verify the password using bcrypt
-            if bcrypt.checkpw(user_data['password'].encode('utf-8'), user_credentials[user_data['user_id']]):
-                return render_template("admin-controls-page.html", result=var)
+            if bcrypt.checkpw(user_data['password'].encode('utf-8'),
+                              user_credentials[user_data['user_id']].encode('utf-8')):
+                return render_template("ncd-main.html", result=var)  # change
 
         # If either user ID or password is incorrect, deny access
         return '''
@@ -98,7 +117,7 @@ def main():
                 <b>Kindly use the correct credentials</b>
                 '''
     else:
-        return render_template('ncd-main.html', result=var)
+        return render_template('users-loging-page.html', result=var)
 
 
 @app.route(rule='/flask_tutorial1/agl-ncd/', methods=['GET', 'POST'])
