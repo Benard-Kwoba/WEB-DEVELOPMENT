@@ -748,6 +748,7 @@ ________________________________________________________________________________
     }
     .header-logins {
         background-color:  rgb(31, 73, 125);
+        overflow-x: hidden;
         width: 20vw;
         height: 8.1vh;
         display: flex;
