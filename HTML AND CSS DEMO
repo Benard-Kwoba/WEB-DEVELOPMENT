@@ -814,7 +814,7 @@ ________________________________________________________________________________
         padding-top: 0px;
         display: inline;
         height: 87.2vh;
-        margin-top: 11.5vh; /*laptop was 11.5vh*/
+        margin-top: 11.7vh; /*laptop was 11.5vh*/
         overflow-y: scroll;
         position: fixed;
         left: 0;
