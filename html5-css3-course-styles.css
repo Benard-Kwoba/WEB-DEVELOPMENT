@@ -1,7 +1,7 @@
 /*______________________________________________responsive design for larger screens(desktop)__________________________________________________________*/
 @media screen and (min-width: 1367px){
     .header-title {
-        background-color: #fcfcfc;
+        background-color: /*white*/#fcfcfc;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -11,7 +11,14 @@
         position: fixed;
         top: 0%; 
         left: 0;
-        z-index: 1; 
+        z-index: 100; 
+    }
+    .header-title img {
+        /*user-drag: none; /* Standard syntax */
+        -webkit-user-drag: none;
+        user-select: none; /* Disable user selection */
+        -moz-user-select: none; /* Disable user selection for Firefox */
+        -ms-user-select: none; /* Disable user selection for Internet Explorer/Edge */
     }
     .header-meta {
         margin-left: 39.420vw;
@@ -57,7 +64,7 @@
     .login-btn {
         padding: 1% 1%;
         font-size: 18px;
-        border: groove;
+        border: ridge transparent;
         /*background-color: black; inline css*/
         color: white;
         cursor: pointer;
@@ -96,8 +103,7 @@
     body {
         display: flex;
         justify-content: space-between;
-        background-color: #121619;
-        height: 5800px;
+        background-color: black;
     }
     section {
         width: 14vw;
@@ -115,24 +121,28 @@
     .html-topics {
         height:1750px;
         width: 24vw;
-        background-color: #f2f2f2;  /*0.877 means 87.77% transparent*/
+        color: white;
+        background-color: green;  /*0.877 means 87.77% transparent*/
         margin-top: 11.5vh;
         right: 0;
         display: inline-block;
         margin-left: 14vw;
         position: absolute;
         left: 0;
+        box-sizing: border-box;
     }
     .overview {
         width: 22vw;
         margin-top: 11.5vh;
         margin-left: 38vw;
-        background-color: white;
+        background-color: rgba(250, 250, 0, 0.7);
         height: 1750px;
         position: absolute;
         display: inline-block;
         left: 0;
-        right: 0    ;
+        right: 0;
+        justify-content: center;
+        box-sizing: border-box;
 
     }
     .css-topics {
@@ -140,10 +150,12 @@
         width: 25vw;
         margin-top: 11.5vh;
         display: inline-block;
-        background-color: #f2f2f2;
+        color: white;
+        background-color: green;  /*0.877 means 87.77% transparent*/
         position: absolute;
         margin-left: 60vw;
-        left: 0;  
+        left: 0;
+        box-sizing: border-box;
     }
     aside {
         height:4732.9px;
@@ -151,14 +163,15 @@
         margin-top: 11.5vh; /*laptop original was 11.9*/
         justify-content: center;
         display: inline-block;
-        background-color: f2f2f2;
+        background-color: black;
         position: absolute;
         margin-left: 85vw;
         left: 0; 
+        overflow: hidden;
         color: black;
     }
     main{
-        background-color: #f2f2f2;
+        background-color: #dce9dd;
         padding-left: 2%;
         width: 69vw;
         height: 3050.5px;
@@ -195,7 +208,7 @@
         margin-right: 2vw;
     }
     .main-2 {
-        background-color: #f2f2f2;
+        background-color: #dce9dd;
         display: flexible;
         right: 0;
         margin-left: 14vw;
@@ -204,6 +217,7 @@
         position: absolute;
         border-top: 5px groove black;
         left: 0;
+        font-family: 'Times New Roman', Times, serif;
     }
     footer {
         height:201px;
@@ -211,15 +225,16 @@
         margin-top: 5800px; 
         justify-content: center;
         display: inline-block;
-        background-color:#121619;
+        background-color:black;
         position: absolute;
         margin-left: 14vw;
         left: 0; 
         right: 10;
         color: white;
+        font-family: 'Times New Roman', Times, serif;
     }
     a:link, a:visited {
-        background-color: peru;
+        background-color: rgba(250, 250, 0, 0.7); /*see color peru*/
         color: white;
         padding: 3px 7px;
         text-align: center;
@@ -232,6 +247,25 @@
     
     a:active {
         color: yellow;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .footer-hyperlinks {
+        color: inherit; background-color: inherit; padding: 0; text-align: left; text-decoration: none;
+    }
+    .footer-hyperlinks:link, .footer-hyperlinks:visited {
+        background-color: inherit;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: block; /*see inline-block*/
+    }
+    .footer-hyperlinks:hover, .footer-hyperlinks:active {
+        background-color: inherit;
+    }
+    
+    .footer-hyperlinks:active {
+        color: inherit;
         background-color: transparent;
         text-decoration: none;
     }
@@ -321,6 +355,15 @@
     tr:hover {
         background-color: black;
     }
+    #div1 {
+        width: 150px;
+        height: 30px;
+        padding: 5px;
+        border: 1px solid #aaaaaa;
+        margin-left: 2vw;
+        background-color: #000000;
+    }
+    
 }
 
 /*______________________________________________responsive design for large laptops____________________________________________________________*/
