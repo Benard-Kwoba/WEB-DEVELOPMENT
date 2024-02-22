@@ -1,0 +1,774 @@
+/*______________________________________________responsive design for larger screens(desktop)__________________________________________________________*/
+@media screen and (min-width: 1367px){
+    .header-title {
+        background-color: /*white*/#fcfcfc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        height: 8.1vh;
+        width: 40vw;
+        position: fixed;
+        top: 0%; 
+        left: 0;
+        z-index: 100; 
+    }
+    .header-title img {
+        /*user-drag: none; /* Standard syntax */
+        -webkit-user-drag: none;
+        user-select: none; /* Disable user selection */
+        -moz-user-select: none; /* Disable user selection for Firefox */
+        -ms-user-select: none; /* Disable user selection for Internet Explorer/Edge */
+    }
+    .header-meta {
+        margin-left: 39.420vw;
+        width: 60vw;
+        height: 8.1vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        top: 0%; 
+        z-index: 1;
+    }
+    .header-python {
+        background-color:  #fcfcfc;;
+        width: 40vw;
+        height: 8.1vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        top: 0%; 
+        z-index: 1;
+    }
+    .header-python a:hover {
+        color: cyan;
+    }
+    .header-logins {
+        background-color:  #fcfcfc;
+        width: 20vw;
+        height: 8.1vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        top: 0%; 
+        right: 0;
+        padding-right: 10px;
+        z-index: 1; 
+    }
+    .login-btn {
+        padding: 1% 1%;
+        font-size: 18px;
+        border: ridge transparent;
+        /*background-color: black; inline css*/
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /*transition: property duration timing-function;*/
+    }
+    
+    .login-btn:hover {
+        background-color: #45a049;
+    }
+
+    nav {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        height: 4.95vh;
+        width: 100%;
+        position: fixed;
+        top: 8%; 
+        left: 0;
+        z-index: 999; 
+        /*z-index value of 999 is a commonly used high value that is often used to ensure that
+        an element appears on top of most other elements on a web page.*/
+    }
+    .nav-links li{
+        list-style-type: none;
+        display: flex;
+        float: left;
+        overflow: hidden;
+    }
+    .nav-links li a:hover {
+        color: cyan;
+    }
+
+    body {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
+    section {
+        width: 14vw;
+        background-color: white;
+        color: black;
+        padding-top: 0px;
+        display: inline;
+        height: 87.2vh;
+        margin-top: 11.9vh; /*laptop was 11.5vh*/
+        overflow-y: scroll;
+        position: fixed;
+        left: 0;
+        /*my laptop width = 1366px*/
+    }
+    .html-topics {
+        height:1750px;
+        width: 24vw;
+        color: white;
+        background-color: green;  /*0.877 means 87.77% transparent*/
+        margin-top: 11.5vh;
+        right: 0;
+        display: inline-block;
+        margin-left: 14vw;
+        position: absolute;
+        left: 0;
+        box-sizing: border-box;
+    }
+    .overview {
+        width: 22vw;
+        margin-top: 11.5vh;
+        margin-left: 38vw;
+        background-color: rgba(250, 250, 0, 0.7);
+        height: 1750px;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        box-sizing: border-box;
+
+    }
+    .css-topics {
+        height:1750px;
+        width: 25vw;
+        margin-top: 11.5vh;
+        display: inline-block;
+        color: white;
+        background-color: green;  /*0.877 means 87.77% transparent*/
+        position: absolute;
+        margin-left: 60vw;
+        left: 0;
+        box-sizing: border-box;
+    }
+    aside {
+        height:4732.9px;
+        width: 13.95vw;  /*laptop original was 13.79vw*/
+        margin-top: 11.5vh; /*laptop original was 11.9*/
+        justify-content: center;
+        display: inline-block;
+        background-color: black;
+        position: absolute;
+        margin-left: 85vw;
+        left: 0; 
+        overflow: hidden;
+        color: black;
+    }
+    main{
+        background-color: #dce9dd;
+        padding-left: 2%;
+        width: 69vw;
+        height: 3050.5px;
+        margin-top: 1835px; 
+        margin-left: 14vw;   
+        display: inline-block;
+        right: 0;
+        position:absolute;
+        border-top: 5px groove black;
+        left: 0;
+    }
+    .sql-image-container {
+        position: relative;
+        max-width: 7vw;
+        animation: popInOut 4s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+    }
+    
+    @keyframes popInOut {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+    .descriptive-lists {
+        background-color: #dce9dd;
+        width: 25vw;
+        margin-top: 2vh;
+        margin-left: 20vw;
+    }
+    article {
+        background-color: grey;
+        margin-right: 2vw;
+    }
+    .main-2 {
+        background-color: #dce9dd;
+        display: flexible;
+        right: 0;
+        margin-left: 14vw;
+        height: 910px;
+        margin-top: 4890px;
+        position: absolute;
+        border-top: 5px groove black;
+        left: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    footer {
+        height:201px;
+        width: 84.95vw;  
+        margin-top: 5800px; 
+        justify-content: center;
+        display: inline-block;
+        background-color:black;
+        position: absolute;
+        margin-left: 14vw;
+        left: 0; 
+        right: 10;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    a:link, a:visited {
+        background-color: rgba(250, 250, 0, 0.7); /*see color peru*/
+        color: white;
+        padding: 3px 7px;
+        text-align: center;
+        text-decoration: none;
+        display: block; /*see inline-block*/
+    }
+    a:hover, a:active {
+        background-color: green;
+    }
+    
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .footer-hyperlinks {
+        color: inherit; background-color: inherit; padding: 0; text-align: left; text-decoration: none;
+    }
+    .footer-hyperlinks:link, .footer-hyperlinks:visited {
+        background-color: inherit;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: block; /*see inline-block*/
+    }
+    .footer-hyperlinks:hover, .footer-hyperlinks:active {
+        background-color: inherit;
+    }
+    
+    .footer-hyperlinks:active {
+        color: inherit;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    h2 {
+        text-align: left;
+
+    }
+    p {
+        line-height: 1.5;
+        text-indent: 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+    mark {
+        background-color: yellow;
+        color: black;
+    }
+    pre {
+        text-align: left;
+        /* note the use of preformated texts*/
+    }
+    .assert {
+        font-style: italic;
+        color: green;
+    }
+    hr {
+        border: True;  /* omit border to set default, to remove default set to 'none' */
+        border-top: 10px groove black;  /* size, style(e.g dotted, dashed), color */
+        border-width: 100%; /* to fit the width of the page completely */
+        /* also see border-bottom, right, left; border-image
+        see: <hr style="border-top-width: 1px; border-top-style: solid; border-top-color: #ccc;"> 
+        */
+    }
+    ol {
+        list-style-position: inside;
+        padding-right: 0;
+        text-align: left;
+    }
+    .tuts {
+        font-size: 100%;  /*% to occupy entire width, px to increase visibility/appearence*/
+        color: yellow;
+    }
+
+    .content0 {
+        overflow: visible;
+        border: 2px dashed grey;
+        padding: 5px;
+        background-color: rgb(0, 0, 0);
+        height: 100px;
+    }
+    .content1 {
+        overflow: visible;
+        border: 2px dashed grey;
+        padding: 3px;
+        background-color: rgb(0, 0, 0);
+        height: 950px;
+    }
+    .content2 {
+        overflow: visible;
+        border: 2px dashed grey;
+        padding: 3px;
+        background-color: rgb(0, 0, 0);
+        height: 600px;
+    }
+    table, th {
+        border: groove black 5px;
+        text-align: left;
+        justify-content: center;
+        color: white;
+        padding-left: 5px;
+        margin: 30px;
+        background-color: rgba(0, 60, 255, 0.5);
+        border-collapse: collapse;
+    }
+    td {
+        color: white;
+        padding: 5px;
+        background-color: rgba(104, 105, 92, 0.877);
+        border:2px solid black;
+        border-collapse: collapse;
+        /*you can also insert rounded borders with border-radius: 10px;*/
+    }
+    tr td:nth-child(2n){
+        background-color: rgba(172, 255, 47, 0.1);
+        font-style: italic;
+    }
+    tr:hover {
+        background-color: black;
+    }
+    #div1 {
+        width: 150px;
+        height: 30px;
+        padding: 5px;
+        border: 1px solid #aaaaaa;
+        margin-left: 2vw;
+        background-color: #000000;
+    }
+    
+}
+
+/*______________________________________________responsive design for large laptops____________________________________________________________*/
+@media screen and (min-width: 993px) and (max-width: 1366px){
+    .header-title {
+        background-color: #fcfcfc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        height: 8.1vh;
+        width: 40vw;
+        position: fixed;
+        top: 0%; 
+        left: 0;
+        z-index: 1; 
+    }
+    .header-meta {
+        margin-left: 39.420vw;
+        width: 60vw;
+        height: 8.1vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        top: 0%; 
+        z-index: 1;
+    }
+    .header-python {
+        background-color:  #fcfcfc;
+        width: 40vw;
+        height: 8.1vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        top: 0%; 
+        z-index: 1;
+    }
+    .header-python a:hover {
+        color: cyan;
+    }
+    .header-logins {
+        background-color:  #fcfcfc;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 20vw;
+        height: 8.1vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        top: 0%; 
+        right: 0;
+        padding-right: 10px;
+        z-index: 1; 
+    }
+    .login-btn {
+        padding: 1% 1%;
+        font-size: 18px;
+        border: groove;
+        /*background-color: black; inline css*/
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /*transition: property duration timing-function;*/
+    }
+    
+    .login-btn:hover {
+        background-color: #45a049;
+    }
+
+    nav {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        height: 4.95vh;
+        width: 100%;
+        position: fixed;
+        top: 8%; 
+        left: 0;
+        z-index: 999; 
+        /*z-index value of 999 is a commonly used high value that is often used to ensure that
+        an element appears on top of most other elements on a web page.*/
+    }
+    .nav-links li{
+        list-style-type: none;
+        display: flex;
+        float: left;
+        overflow: hidden;
+    }
+    .nav-links li a:hover {
+        color: cyan;
+    }
+
+    body {
+        width: auto;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: space-between;
+        background-color: RED;
+        height: 5000px;
+    }
+    section {
+        width: 14vw;
+        background-color: white;
+        color: black;
+        padding-top: 0px;
+        display: inline;
+        height: 87.2vh;
+        margin-top: 11.7vh; /*laptop was 11.5vh*/
+        overflow-y: scroll;
+        position: fixed;
+        left: 0;
+        /*my laptop width = 1366px*/
+    }
+    .html-topics {
+        height:1750px;
+        width: 24vw;
+        background-color: rgba(179, 255, 0, 0.877);  /*0.877 means 87.77% transparent*/
+        margin-top: 11.5vh;
+        right: 0;
+        display: inline-block;
+        margin-left: 14vw;
+        position: absolute;
+        left: 0;
+    }
+    .overview{
+        width: 22vw;
+        margin-top: 11.5vh;
+        margin-left: 38vw;
+        background-color: orchid;
+        height: 1750px;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        right: 0    ;
+
+    }
+    .css-topics {
+        height:1750px;
+        width: 25vw;
+        margin-top: 11.5vh;
+        display: inline-block;
+        background-color: rgba(179, 255, 0, 0.877);
+        position: absolute;
+        margin-left: 60vw;
+        left: 0;  
+    }
+    aside {
+        height:4732.9px;
+        width: 13.95vw;  /*laptop original was 13.79vw*/
+        margin-top: 11.5vh; 
+        justify-content: center;
+        display: inline-block;
+        background-color: rgba(179, 255, 0, 0.855);
+        position: absolute;
+        margin-left: 85vw;
+        left: 0; 
+        color: black;
+    }
+    .descriptive-lists {
+        background-color: #45a049;
+        width: 25vw;
+        margin-top: 2vh;
+        margin-left: 20vw;
+    }
+    article {
+        background-color: goldenrod;
+        margin-right: 2vw;
+    }
+    footer {
+        /*ADD*/
+        height:200px;
+        width: 84.95vw;  
+        margin-top: 2714.3px; 
+        justify-content: center;
+        display: inline-block;
+        background-color:rgba(245, 245, 245, 0.99);
+        position: absolute;
+        margin-left: 0vw;
+        left: 0; 
+        right: 10;
+        color: black;
+    }
+
+    a:link, a:visited {
+        background-color: brown;
+        color: white;
+        padding: 3px 7px;
+        text-align: center;
+        text-decoration: none;
+        display: block; /*see inline-block*/
+    }
+    a:hover, a:active {
+        background-color: green;
+    }
+    
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    h2 {
+        text-align: left;
+
+    }
+    p {
+        line-height: 1.5;
+        text-indent: 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+    mark {
+        background-color: yellow;
+        color: black;
+    }
+    pre {
+        text-align: left;
+        /* note the use of preformated texts*/
+    }
+    .assert {
+        font-style: italic;
+        color: white;
+    }
+    hr {
+        border: True;  /* omit border to set default, to remove default set to 'none' */
+        border-top: 10px groove black;  /* size, style(e.g dotted, dashed), color */
+        border-width: 100%; /* to fit the width of the page completely */
+        /* also see border-bottom, right, left; border-image
+        see: <hr style="border-top-width: 1px; border-top-style: solid; border-top-color: #ccc;"> 
+        */
+    }
+    ol {
+        list-style-position: inside;
+        padding-right: 0;
+        text-align: left;
+    }
+    .tuts {
+        font-size: 100%;  /*% to occupy entire width, px to increase visibility/appearence*/
+        color: yellow;
+    }
+
+    .content0 {
+        overflow: visible;
+        border: 2px dashed grey;
+        padding: 5px;
+        background-color: rgb(0, 0, 0);
+        height: 100px;
+    }
+    .content1 {
+        overflow: visible;
+        border: 2px dashed grey;
+        padding: 3px;
+        background-color: rgb(0, 0, 0);
+        height: 950px;
+    }
+    .content2 {
+        overflow: visible;
+        border: 2px dashed grey;
+        padding: 3px;
+        background-color: rgb(0, 0, 0);
+        height: 600px;
+    }
+    main{
+        background-color: rgba(179, 255, 0, 0.877);
+        padding-left: 2%;
+        width: 69vw;
+        height: 2977.5px;
+        margin-top: 1823px; 
+        margin-left: 14vw;   
+        display: inline-block;
+        right: 0;
+        position:absolute;
+        border-top: 5px groove black;
+        left: 0;
+    }
+    table, th {
+        border: groove black 5px;
+        text-align: left;
+        justify-content: center;
+        color: white;
+        padding-left: 5px;
+        margin: 30px;
+        background-color: rgba(0, 60, 255, 0.5);
+        border-collapse: collapse;
+    }
+    td {
+        color: white;
+        padding: 5px;
+        background-color: rgba(104, 105, 92, 0.877);
+        border:2px solid black;
+        border-collapse: collapse;
+        /*you can also insert rounded borders with border-radius: 10px;*/
+    }
+    tr td:nth-child(2n){
+        background-color: rgba(172, 255, 47, 0.1);
+        font-style: italic;
+    }
+    tr:hover {
+        background-color: black;
+    }
+}
+
+/* ________________________________________________________responsive desing for laptops_______________________________________________________*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* CSS styles for medium screens */
+
+
+}
+
+  
+/*____________________________________________responsive desing for small devices(tablets)_____________________________________________________*/
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .header-python {
+        visibility: hidden;
+    }
+    .login-btn {
+        font-size: 15px;
+    }
+    .header-title {
+        width: 78.2vw;
+    }
+    nav {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav-links {
+      margin-top: 5px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+    section {
+        width: 14vw;
+        background-color: white;
+        color: black;
+        display: inline;
+        height: 87.2vh;
+        margin-top: 11.5vh; 
+        overflow-y: scroll;
+        position: fixed;
+        left: 0;
+    }
+    aside {
+        visibility: hidden;
+        
+    }
+}
+
+
+/* _____________________________________________responsive design for small screens(phones)___________________________________________________*/
+@media screen and (max-width: 576px) {
+    .header-python {
+        visibility: hidden;
+    }
+    .login-btn {
+        font-size: 15px;
+    }
+    .header-title {
+        width: 78.2vw;
+    }
+    nav {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav-links {
+      margin-top: 5px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+    section {
+        width: 14.9vw;
+        background-color: rgba(250, 250, 0, 0.7);
+        color: black;
+        padding-top: 0px;
+        display: inline;
+        height: 87.00vh;
+        margin-top: 100px;
+        overflow-y: scroll;
+        position: fixed;
+        left: 0;
+        visibility: hidden;
+    }
+    aside {
+        visibility: hidden;
+        
+    }
+}
